@@ -6,7 +6,7 @@ This is a port of https://github.com/SoundstripeEngineering/react-audio-waveform
 
 Kinda WIP, not following best practices or anything, use at your own discretion.
 
-For usage docs you can refer to original React repo for now.
+For details, usage, docs you can refer to original React repo for now.
 
 My first project with Selte/Sapper, also I had almost no previous experience with React. But this proved to me how easy it is to get started with Svelte + this needs much less of a code than original version written in React. (Svelte's bind is really magic).
 
