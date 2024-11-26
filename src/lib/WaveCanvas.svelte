@@ -88,7 +88,6 @@ const drawBars = (ctx: CanvasRenderingContext2D, width: number, peaks: number[])
         const stop = index / (params.gradientColors.length - 1); // Calculate stop dynamically
         gradient.addColorStop(stop, color);
     });
-
     ctx.fillStyle = gradient;
   } else {
     ctx.fillStyle = params.color;
@@ -108,7 +107,7 @@ const drawWaves = (ctx: CanvasRenderingContext2D, width: number, peaks: number[]
     normalize: true,
     pixelRatio,
     color,
-    gradientColors: [[0, "#73E0A9"], [1, "#7374E0"]]
+    gradientColors: gradientColors
   };
 
   const hasMinValues = peaks.some(val => val < 0);
@@ -127,10 +126,11 @@ const drawWaves = (ctx: CanvasRenderingContext2D, width: number, peaks: number[]
   const scale = params.fillParent && width != length ? width / length : 1;
   const absmax = params.normalize ? Math.max(maxf(peaks), -minf(peaks)) : 1;
 
-  if (params.gradientColors) {
+  if (params.gradientColors.length > 0) {
     const gradient = ctx.createLinearGradient(0, 0, canvasWidth, 0);
-    params.gradientColors.forEach(([stop, clr]) => {
-      gradient.addColorStop(stop, clr);
+    params.gradientColors.forEach((color, index) => {
+        const stop = index / (params.gradientColors.length - 1); // Calculate stop dynamically
+        gradient.addColorStop(stop, color);
     });
     ctx.fillStyle = gradient;
   } else {

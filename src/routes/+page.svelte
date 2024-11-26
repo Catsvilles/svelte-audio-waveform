@@ -43,9 +43,13 @@
     });
   }
 
-  function handleSeek(event: CustomEvent<number>) {
+  function handleSeek(event: CustomEvent<number>) {    
     if (!audio) return;
-    const newTime = event.detail * audio.duration;
+
+    const target = event.currentTarget.getBoundingClientRect();
+    const position = event.pageX - target.left;
+    const rate  = position / target.width;    
+    const newTime = rate * audio.duration;
     audio.currentTime = newTime;
   }
 
@@ -100,13 +104,13 @@
     <div class="waveform-container">
       <h3>Basic Waveform</h3>
       <AudioWaveform
-        barWidth={4}
+        barWidth={0}
         peaks={peaks}
         height={100}
         width={800}
         position={progress}
         duration={duration}
-        onSeek={handleSeek}
+        on:click={handleSeek}
       />
       
       <div class="controls">
@@ -124,6 +128,35 @@
       </div>
     </div>
 
+    <!-- Example 1.2: Basic Waveform With Bars -->
+    <div class="waveform-container">
+      <h3>Basic Waveform With Bars</h3>
+      <AudioWaveform
+        barWidth={4}
+        peaks={peaks}
+        height={100}
+        width={800}
+        position={progress}
+        duration={duration}
+        on:click={handleSeek}
+      />
+      
+      <div class="controls">
+        <button 
+          on:click={togglePlayPause}
+          class="play-pause-btn"
+        >
+          {isPlaying ? '⏸️' : '▶️'}
+        </button>
+        
+        <div class="time-display">
+          {formatTime(progress * duration)}
+          <span class="right-aligned">{formatTime(duration)}</span>
+        </div>
+      </div>
+    </div>
+
+
     <!-- Example 2: Gradient Waveform Color -->
     <div class="waveform-container">
       <h3>Gradient Waveform Color</h3>
@@ -135,7 +168,7 @@
         gradientColors={["red", "blue", "green"]}
         position={progress}
         duration={duration}
-        onSeek={handleSeek}
+        on:click={handleSeek}
       />
       
       <div class="controls">
@@ -164,7 +197,7 @@
         progressGradientColors={["green", "blue", "red"]}
         position={progress}
         duration={duration}
-        onSeek={handleSeek}
+        on:click={handleSeek}
       />
       
       <div class="controls">
