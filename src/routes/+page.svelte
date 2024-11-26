@@ -66,22 +66,17 @@
   <title>Svelte Audio Waveform - Stunning Audio Visualizations</title>
   <meta name="description" content="Add stunning, customizable audio waveform visualizations to your Svelte apps. Perfect for music players, podcasts, and more!" />
   <meta name="keywords" content="Svelte, Audio Waveform, Music Player, Podcast Visualization, Audio Visualization" />
-  <meta name="author" content="Your Name or Company" />
+  <meta name="author" content="https://github.com/Catsvilles/svelte-audio-waveform" />
   
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Svelte Audio Waveform - Stunning Audio Visualizations" />
   <meta property="og:description" content="Add stunning, customizable audio waveform visualizations to your Svelte apps. Perfect for music players, podcasts, and more!" />
-  <meta property="og:image" content="/path/to/your-image.png" />
   <meta property="og:url" content="https://yourwebsite.com/audio-waveform" />
   
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Svelte Audio Waveform - Stunning Audio Visualizations" />
   <meta name="twitter:description" content="Add stunning, customizable audio waveform visualizations to your Svelte apps. Perfect for music players, podcasts, and more!" />
-  <meta name="twitter:image" content="/path/to/your-image.png" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" />
 </svelte:head>
 
 <main>
