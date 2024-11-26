@@ -1,3 +1,3 @@
-import Waveform from './components/Waveform.svelte';
-export { Waveform };
-export default Waveform;
+import AudioWaveform from './AudioWaveform.svelte';
+export { AudioWaveform };
+export default AudioWaveform;

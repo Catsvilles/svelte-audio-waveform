@@ -109,7 +109,6 @@
         height={100}
         width={800}
         position={progress}
-        duration={duration}
         on:click={handleSeek}
       />
       
@@ -137,7 +136,6 @@
         height={100}
         width={800}
         position={progress}
-        duration={duration}
         on:click={handleSeek}
       />
       
@@ -165,9 +163,8 @@
         peaks={peaks}
         height={100}
         width={800}
-        gradientColors={["red", "blue", "green"]}
+        gradientColors={["#00f260", "#0575e6", "#ff0084"]}
         position={progress}
-        duration={duration}
         on:click={handleSeek}
       />
       
@@ -194,9 +191,8 @@
         peaks={peaks}
         height={100}
         width={800}
-        progressGradientColors={["green", "blue", "red"]}
+        progressGradientColors={["#00f260", "#0575e6", "#ff0084"]}
         position={progress}
-        duration={duration}
         on:click={handleSeek}
       />
       

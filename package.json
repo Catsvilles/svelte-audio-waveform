@@ -7,7 +7,7 @@
 	},
 	"homepage": "https://github.com/Catsvilles/svelte-audio-waveform/",
 	"author": "Catsvilles",
-	"version": "0.0.1",
+	"version": "0.0.4",
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",

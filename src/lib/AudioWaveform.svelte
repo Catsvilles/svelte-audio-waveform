@@ -24,12 +24,6 @@ let {
   barWidth,
   width
 } = $props<Props>();
-
-let pixelRatio = $state(1);
-
-$effect.pre(() => {
-  pixelRatio = window.devicePixelRatio || screen.deviceXDPI / screen.logicalXDPI;
-});
 </script>
 
 <div 
