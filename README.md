@@ -29,6 +29,8 @@ npm install svelte-audio-waveform
 - 📱 **Responsive design**
 - 🔍 **High-resolution support (600/1200 peaks)**
 
+![Svelte Audio Waveform Demo](static/svelte-audio-waveform.png)
+
 ---
 
 ## Basic Usage
